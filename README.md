@@ -24,7 +24,7 @@
 ## Part 2: Design Climate App
 ### In this section, we designed a Flask API on the queries that we developed. 
 
-#### /
+#### 1. /
 ##### Start at the homepage and list all available routes: 
 /api/v1.0/precipitation
 /api/v1.0/stations
@@ -32,10 +32,10 @@
 /api/v1.0/start
 /api/v1.0/start/end
 
-#### /api/v1.0/precipitation
+#### 2. /api/v1.0/precipitation
 ##### Convert the query results from your precipitation analysis (i.e. retrieve only the last 12 months of data) to a dictionary using date as the key and prcp as the value. Return the JSON representation of your dictionary. The first date in the dictonary is "2016-08-23": 0.7, and the last is "2017-08-23": 0.45
 
-#### /api/v1.0/stations
+#### 3. /api/v1.0/stations
 ##### Return a JSON list of stations from the dataset. 
  "USC00519397",
   "USC00513117",
@@ -47,16 +47,16 @@
   "USC00511918",
   "USC00516128"
 
-#### /api/v1.0/api/v1.0/tobs
+#### 4. /api/v1.0/api/v1.0/tobs
 ##### Query the dates and temperature observations of the most-active station for the previous year of data. Return a JSON list of temperature observations for the previous year. The first observed temp is 77.0 and the last is 79.0.
 
-#### /api/v1.0/<start> --- To test if this route worked I used /api/v1.0/'2016-08-23'
+#### 5. /api/v1.0/<start> --- To test if this route worked I used /api/v1.0/'2016-08-23'
 ##### Return a JSON list of the minimum temperature, the average temperature, and the maximum temperature for a specified start date. For a specified start, calculate TMIN, TAVG, and TMAX for all the dates greater than or equal to the start date.
 ###### http://127.0.0.1:5000/api/v1.0/'2016-08-23'
 Returns: Min temp: 53.0, Avg temp: 73.09795396419437, Max temp: 87.0
 
 
-#### /api/v1.0/<start>/<end> --- To test if this route worked I used /api/v1.0/2016-10-11/2017-08-11
+#### 6. /api/v1.0/<start>/<end> --- To test if this route worked I used /api/v1.0/2016-10-11/2017-08-11
 ##### Return a JSON list of the minimum temperature, the average temperature, and the maximum temperature for a specified start date. For a specified start date and end date, calculate TMIN, TAVG, and TMAX for the dates from the start date to the end date, inclusive.
 ###### http://127.0.0.1:5000/api/v1.0/2016-10-11/2017-08-11
 Returns: Min temp: 58.0, Avg temp: 73.9524064171123, Max temp: 87.0
