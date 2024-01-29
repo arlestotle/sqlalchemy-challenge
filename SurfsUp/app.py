@@ -101,10 +101,10 @@ def tobs ():
 def start_date(start):
     session = Session(engine)
     summary = session.query(func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)).filter(Measurement.date >= start).all()
-    summary_list = []
+    start_list = []
     for i in range(len(summary)):
-        summary_list.append(summary[i][0:])
-    return jsonify(summary_list)
+        start_list.append(summary[i][0:])
+    return jsonify(start_list)
     
 
 ### For a specifed start date and end date, calculate TMIN, TAVE, and TMAX for the dates from teh start date to the end date, inclusive
@@ -114,8 +114,8 @@ def start_date(start):
 def start_end_date(start,end):
     session = Session(engine)
     summary = session.query(func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)).filter(Measurement.date >= start).filter(Measurement.date <= end).all()
-    summary_list = list(np.ravel(summary))
-    return jsonify(summary_list)
+    start_end_list = list(np.ravel(summary))
+    return jsonify(start_end_list)
 
 
 #################################################
