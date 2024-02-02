@@ -1,6 +1,6 @@
 # Module 10 - sqlalchemy-challenge
 
-### In this challenge, we were tasked to create a climate analysis for a long holidatvacation to Honolulu, Hawaii. This challenge was split into two parts: Analyze and Explore the Climate Data and Designing a Climate App.
+### In this challenge, we were tasked to create a climate analysis for a long holiday vacation to Honolulu, Hawaii. This challenge was split into two parts: Analyze and Explore the Climate Data and Designing a Climate App.
 
 ## Part 1: Amalyze and Explore the CLimate Data
 ### In this section, we used Python and SQLAlchemy to do basic climate analusis and data exploration of the climate database. 
