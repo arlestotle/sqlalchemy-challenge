@@ -12,6 +12,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 from flask import Flask, jsonify
 
+
 #################################################
 # Database Setup
 #################################################
@@ -31,24 +32,17 @@ Measurement = Base.classes.measurement
 # Create our session (link) from Python to the DB
 session = Session(engine)
 
+
+
 #################################################
 # Flask Setup
 #################################################
-
 # Create an app
 app = Flask(__name__)
-# Your routes and other configurations go here
-
-# if __name__ == "__main__":
-    # Specify the port number you want, for example, 8000
-   # app.run(port=5500)
-
 
 #################################################
 # Flask Routes
 #################################################
-
-# 1. Start a homepage and list all available routes
 @app.route("/")
 
 def welcome(): 
